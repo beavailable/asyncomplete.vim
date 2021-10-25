@@ -6,7 +6,7 @@ let g:asyncomplete_loaded = 1
 if get(g:, 'asyncomplete_enable_for_all', 1)
     augroup asyncomplete_enable
         au!
-        au BufEnter * if exists('b:asyncomplete_enable') == 0 | call asyncomplete#enable_for_buffer() | endif
+        au BufEnter,BufWinEnter * if exists('b:asyncomplete_enable') == 0 | call asyncomplete#enable_for_buffer() | endif
     augroup END
 endif
 
